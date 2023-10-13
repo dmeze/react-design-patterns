@@ -42,7 +42,7 @@ const Command: FC = () => {
             <Receiver text={text} />
             <AddTextCommand execute={() => { setCommands([...commands, () => addText('Some text')]); }} />
             <RemoveLastCharCommand execute={() => { setCommands([...commands, removeLastChar]); }} />
-            <button onClick={executeCommands}>Exdcute commands</button>
+            <button onClick={executeCommands}>Execute commands</button>
         </div>
     );
 };
