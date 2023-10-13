@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Bridge from './patterns/Bridge';
+import DecoratedList from './patterns/Decorator';
+import FacadeComponent from './patterns/Facade';
+import Strategy from './patterns/Strategy';
+import Memento from './patterns/Memento';
+import Command from './patterns/Command';
+import State from './patterns/State';
+import Template from './patterns/Template';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Bridge />
+        <DecoratedList />
+        <FacadeComponent />
+        <Strategy />
+        <Memento />
+        <Command />
+        <State />
+        <Template />
     </div>
   );
 }
