@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Bridge from './patterns/Bridge';
-import DecoratedList from './patterns/Decorator';
-import FacadeComponent from './patterns/Facade';
-import Strategy from './patterns/Strategy';
-import Memento from './patterns/Memento';
-import Command from './patterns/Command';
-import State from './patterns/State';
-import Template from './patterns/Template';
+import Bridge from './patterns/structural/Bridge';
+import DecoratedList from './patterns/structural/Decorator';
+import FacadeComponent from './patterns/structural/Facade';
+import Strategy from './patterns/behaviors/Strategy';
+import Memento from './patterns/behaviors/Memento';
+import Command from './patterns/behaviors/Command';
+import State from './patterns/behaviors/State';
+import Template from './patterns/behaviors/Template';
 
 function App() {
   return (
