@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 
-interface StepProps {
-    onNext: () => void;
-}
-
-const Step1: React.FC<StepProps> = ({ onNext }) => {
+const Step1: React.FC = () => {
     const [name, setName] = useState('');
 
     return (
@@ -16,12 +12,11 @@ const Step1: React.FC<StepProps> = ({ onNext }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
-            <button onClick={onNext}>Next</button>
         </div>
     );
 };
 
-const Step2: React.FC<StepProps> = ({ onNext }) => {
+const Step2: React.FC = () => {
     const [email, setEmail] = useState('');
 
     return (
@@ -33,12 +28,11 @@ const Step2: React.FC<StepProps> = ({ onNext }) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
             />
-            <button onClick={onNext}>Next</button>
         </div>
     );
 };
 
-const Wizard: React.FC<{ steps: React.FC<StepProps>[] }> = ({ steps }) => {
+const Wizard: React.FC<{ steps: React.FC[] }> = ({ steps }) => {
     const [currentStep, setCurrentStep] = useState(0);
 
     const handleNext = () => {
@@ -54,13 +48,14 @@ const Wizard: React.FC<{ steps: React.FC<StepProps>[] }> = ({ steps }) => {
     return (
         <div>
             <h1>Registration Wizard</h1>
-            <CurrentStepComponent onNext={handleNext} />
+            <CurrentStepComponent />
+            <button onClick={handleNext}>Next</button>
         </div>
     );
 };
 
 const Strategy: React.FC = () => {
-    const wizardSteps: React.FC<StepProps>[] = [Step1, Step2];
+    const wizardSteps: React.FC[] = [Step1, Step2];
 
     return (
         <div>
